@@ -1,4 +1,14 @@
-POST http://127.0.0.1:5000/auth/register
+### Login a user POST /AUTH/LOGIN
+POST http://localhost:5000/auth/login
+Content-Type: application/json
+
+{
+    "username": "Abaan@stornk.com",
+    "password": "123456"
+}
+
+###
+POST http://127.0.0.1:5000/auth/register 
 Content-Type: application/json
 
 {
@@ -6,4 +16,24 @@ Content-Type: application/json
     "password": "123456"
 }
 ###
-GET http://127.0.0.1:5000
+GET http://127.0.0.1:5000/todos
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzQxNzU1NTU5LCJleHAiOjE3NDE4NDE5NTl9.qmtw2JKcXvwS2OmT4HTc6lbCt-D6_cxiviIsyG0dgVU
+###
+POST http://127.0.0.1:5000/todos
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzQxNzU1NTU5LCJleHAiOjE3NDE4NDE5NTl9.qmtw2JKcXvwS2OmT4HTc6lbCt-D6_cxiviIsyG0dgVU
+Content-Type: application/json
+
+{
+    "task": "Finish this project"
+}
+
+###
+PUT http://127.0.0.1:5000/todos/2
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzQxNzU1NTU5LCJleHAiOjE3NDE4NDE5NTl9.qmtw2JKcXvwS2OmT4HTc6lbCt-D6_cxiviIsyG0dgVU
+
+{
+    "completed": 1
+}
+###
+DELETE http://127.0.0.1:5000/todos/2
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzQxNzU1MTM5LCJleHAiOjE3NDE4NDE1Mzl9.9MZ6ix_bHFxmSiWvhy_x0Ywx5jKkS7uW0fYdiUrEQhA

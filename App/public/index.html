@@ -311,6 +311,7 @@
 
     // if is authenticated, show todo app
     if (token) {
+        console.log(token)
         async function run() {
             await fetchTodos()
             showDashboard()
