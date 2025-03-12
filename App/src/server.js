@@ -6,7 +6,6 @@ import todoRoutes from './routes/todoRoutes.js'
 import authMiddleware from './middleWares/authMiddlewWare.js'
 
 const app = express()
-const PORT = process.env.PORT || 5003
 
 // Get the file path from the URL of the current module
 const __filename = fileURLToPath(import.meta.url)
@@ -27,7 +26,3 @@ app.get('/', (req, res) => {
 // Routes
 app.use('/auth', authRoutes)
 app.use('/todos', authMiddleware, todoRoutes)
-
-app.listen(PORT, () => {
-    console.log(`Server has started on port: ${PORT}`)
-})
